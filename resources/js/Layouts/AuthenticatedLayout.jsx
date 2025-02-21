@@ -12,23 +12,24 @@ export default function AuthenticatedLayout({ header, children }) {
         useState(false);
 
     return (
-        <div className="min-h-screen bg-gray-100">
-            <nav className="border-b border-gray-100 bg-white">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative min-h-screen bg-[url('banner2.png')] bg-top bg-no-repeat overflow-auto background-welcome background-image">
+            <nav className="relative bg-white z-10 bg-opacity-70">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
                             <div className="flex shrink-0 items-center">
-                                <Link href="/">
-                                    <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
-                                </Link>
+                            <img
+                                className="w-auto max-h-[70px] justify-self-center"            
+                                src="Logo.png"
+                            />
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink
+                                <NavLink lang="th"
                                     href={route('dashboard')}
                                     active={route().current('dashboard')}
                                 >
-                                    Dashboard
+                                    หน้าแรก
                                 </NavLink>
                             </div>
                         </div>
@@ -170,7 +171,11 @@ export default function AuthenticatedLayout({ header, children }) {
                 </header>
             )}
 
-            <main>{children}</main>
+            <main>
+                <div className='w-full center-class'>
+                    {children}
+                </div>
+            </main>
         </div>
     );
 }

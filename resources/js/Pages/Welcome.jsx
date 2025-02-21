@@ -34,7 +34,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <div className="background-welcome">
             <Head title="Welcome" />
-            <div className=" text-black/50 dark:bg-black dark:text-white/50 max=h-screen">
+            <div className=" text-black-50 dark:bg-black dark:text-white/50 max-h-screen">
                 <img
                     id="background"
                     className="absolute top-0 background-image"
